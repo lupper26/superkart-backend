@@ -13,5 +13,5 @@ RUN pip install --no-cache-dir --upgrade -r requirements.txt
 # - -w 4: Uses 4 worker processes for handling requests
 # - -b 0.0.0.0:$PORT: Binds the server to the port Render assigns, on all network interfaces
 # - app:superkart_api: Runs the Flask app instance named superkart_api in app.py
-CMD gunicorn -w 4 -b 0.0.0.0:$PORT app:superkart_api
+CMD gunicorn -w 1 -b 0.0.0.0:$PORT app:superkart_api
 
